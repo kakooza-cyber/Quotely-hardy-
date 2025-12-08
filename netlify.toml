@@ -1,6 +1,7 @@
 [build]
   publish = "."
-  command = "echo 'No build step required'"
+  command = "npm run build"
+  functions = "netlify/functions"
 
 [dev]
   framework = "#static"
@@ -29,4 +30,13 @@
       frame-src 'self' https://*.supabase.co;
     """
 
-# Environment variables will be set in Netlify dashboard
+# Environment variables for Netlify Functions
+[context.production.environment]
+  SUPABASE_URL = "https://your-project.supabase.co"
+  SUPABASE_SERVICE_KEY = "your-service-role-key"
+  SMTP_HOST = "smtp.gmail.com"
+  SMTP_PORT = "587"
+  SMTP_USER = "your-email@gmail.com"
+  SMTP_PASS = "your-app-password"
+  ADMIN_EMAIL = "admin@quotely-hardy.com"
+  EMAIL_FROM = "noreply@quotely-hardy.com"
