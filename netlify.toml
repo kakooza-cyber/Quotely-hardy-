@@ -1,0 +1,32 @@
+[build]
+  publish = "."
+  command = "echo 'No build step required'"
+
+[dev]
+  framework = "#static"
+  targetPort = 3000
+  port = 8888
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Content-Security-Policy = """
+      default-src 'self';
+      script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://unpkg.com https://*.supabase.co;
+      style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com;
+      img-src 'self' https: data:;
+      font-src 'self' https://cdnjs.cloudflare.com;
+      connect-src 'self' https://*.supabase.co https://*.netlify.app;
+      frame-src 'self' https://*.supabase.co;
+    """
+
+# Environment variables will be set in Netlify dashboard
