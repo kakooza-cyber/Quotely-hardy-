@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Quotely-hardy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-quote-left"></i>
+                <h1>Quotely-hardy</h1>
+            </div>
+            <div class="nav-menu">
+                <a href="dashboard.html" class="nav-link">
+                    <i class="fas fa-home"></i> Home
+                </a>
+                <a href="proverbs.html" class="nav-link">
+                    <i class="fas fa-globe"></i> Proverbs
+                </a>
+                <a href="quotes.html" class="nav-link">
+                    <i class="fas fa-quote-right"></i> Quotes
+                </a>
+                <a href="about.html" class="nav-link active">
+                    <i class="fas fa-info-circle"></i> About
+                </a>
+                <div class="user-menu">
+                    <img src="https://ui-avatars.com/api/?name=User&background=4A90E2&color=fff" 
+                         alt="User" class="user-avatar" id="userAvatar">
+                    <div class="dropdown">
+                        <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+                        <a href="favorites.html"><i class="fas fa-heart"></i> Favorites</a>
+                        <a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                    </div>
+                </div>
+            </div>
+            <button class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="about-hero">
+            <div class="hero-content">
+                <h1><i class="fas fa-heart"></i> About Quotely-hardy</h1>
+                <p class="hero-subtitle">"Inspire, Motivate, and Reflect with Quotely"</p>
+                <p class="hero-description">
+                    We believe in the power of words to transform lives. Our mission is to collect and share 
+                    the most inspiring quotes and proverbs from around the world, creating a daily source of 
+                    motivation and reflection for millions of users.
+                </p>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <i class="fas fa-quote-right"></i>
+                    <h3>10,000+</h3>
+                    <p>Quotes</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-users"></i>
+                    <h3>50,000+</h3>
+                    <p>Users</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-globe"></i>
+                    <h3>100+</h3>
+                    <p>Countries</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-heart"></i>
+                    <h3>1M+</h3>
+                    <p>Favorites</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="our-story">
+            <div class="section-header">
+                <h2><i class="fas fa-book-open"></i> Our Story</h2>
+            </div>
+            <div class="story-content">
+                <div class="story-image">
+                    <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&auto=format&fit=crop" 
+                         alt="Our Journey">
+                </div>
+                <div class="story-text">
+                    <p>
+                        Quotely-hardy was founded in 2020 by a small team of writers, designers, and developers 
+                        who shared a common passion for the power of words. What started as a personal collection 
+                        of favorite quotes quickly grew into a community-driven platform.
+                    </p>
+                    <p>
+                        Our journey began with a simple idea: create a space where people could find daily inspiration, 
+                        share meaningful words, and connect with others through shared wisdom. Today, we're proud to 
+                        serve millions of users worldwide, providing a daily dose of motivation and reflection.
+                    </p>
+                    <blockquote class="story-quote">
+                        "Words have power. They can inspire, motivate, and change lives. Our mission is to share 
+                        that power with the world."
+                        <footer>- The Quotely-hardy Team</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+
+        <div class="our-mission">
+            <div class="section-header">
+                <h2><i class="fas fa-bullseye"></i> Our Mission & Values</h2>
+            </div>
+            <div class="mission-cards">
+                <div class="mission-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Inspire Daily</h3>
+                    <p>Provide daily inspiration to help people start their day with positivity and purpose.</p>
+                </div>
+                <div class="mission-card">
+                    <i class="fas fa-hands-helping"></i>
+                    <h3>Community First</h3>
+                    <p>Build a supportive community where users can share, discuss, and grow together.</p>
+                </div>
+                <div class="mission-card">
+                    <i class="fas fa-globe"></i>
+                    <h3>Global Wisdom</h3>
+                    <p>Collect and preserve wisdom from diverse cultures and traditions around the world.</p>
+                </div>
+                <div class="mission-card">
+                    <i class="fas fa-hand-peace"></i>
+                    <h3>Positive Impact</h3>
+                    <p>Use the power of words to create positive change in people's lives and communities.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="team-section">
+            <div class="section-header">
+                <h2><i class="fas fa-users"></i> Meet Our Team</h2>
+                <p>The passionate people behind Quotely-hardy</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&auto=format&fit=crop" 
+                             alt="Alex Johnson">
+                    </div>
+                    <h3>Alex Johnson</h3>
+                    <p class="member-role">Founder & CEO</p>
+                    <p class="member-bio">Passionate about words and their power to transform lives.</p>
+                    <div class="member-social">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&auto=format&fit=crop" 
+                             alt="Sarah Chen">
+                    </div>
+                    <h3>Sarah Chen</h3>
+                    <p class="member-role">Content Director</p>
+                    <p class="member-bio">Curates our collection and ensures quality and diversity.</p>
+                    <div class="member-social">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&auto=format&fit=crop" 
+                             alt="Marcus Lee">
+                    </div>
+                    <h3>Marcus Lee</h3>
+                    <p class="member-role">Lead Developer</p>
+                    <p class="member-bio">Builds the technology that makes Quotely-hardy possible.</p>
+                    <div class="member-social">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&auto=format&fit=crop" 
+                             alt="Priya Sharma">
+                    </div>
+                    <h3>Priya Sharma</h3>
+                    <p class="member-role">Community Manager</p>
+                    <p class="member-bio">Connects with our users and builds our amazing community.</p>
+                    <div class="member-social">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-section">
+            <div class="section-header">
+                <h2><i class="fas fa-envelope"></i> Get In Touch</h2>
+                <p>We'd love to hear from you</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-method">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email Us</h3>
+                        <p>hello@quotely-hardy.com</p>
+                    </div>
+                    <div class="contact-method">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Visit Us</h3>
+                        <p>123 Inspiration Street<br>San Francisco, CA 94107</p>
+                    </div>
+                    <div class="contact-method">
+                        <i class="fas fa-phone"></i>
+                        <h3>Call Us</h3>
+                        <p>+1 (555) 123-4567</p>
+                    </div>
+                    <div class="social-contact">
+                        <h3>Follow Us</h3>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-pinterest"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="contactName">Full Name *</label>
+                            <input type="text" id="contactName" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Email Address *</label>
+                            <input type="email" id="contactEmail" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactSubject">Subject</label>
+                            <input type="text" id="contactSubject" name="subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">Message *</label>
+                            <textarea id="contactMessage" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <div class="section-header">
+                <h2><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How can I submit a quote?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>You can submit quotes through our "Submit Quote" form on the Quotes page. All submissions are reviewed by our team before being published.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Is Quotely-hardy free to use?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! Quotely-hardy is completely free for all users. We may offer premium features in the future, but our core service will always remain free.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How can I contribute to the community?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>You can contribute by submitting quotes, sharing content, participating in discussions, and providing feedback. Join our community!</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Do you have a mobile app?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! Our mobile app is available for both iOS and Android. You can download it from the App Store or Google Play Store.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Quotely-hardy</h4>
+                <p>Inspire, Motivate, and Reflect with Quotely</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="dashboard.html">Home</a>
+                <a href="proverbs.html">Proverbs</a>
+                <a href="quotes.html">Quotes</a>
+                <a href="about.html">About Us</a>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Quotely-hardy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/supabase-client.js"></script>
+    <script src="js/about.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+                                                    </html>
