@@ -104,9 +104,8 @@ class AuthManager {
             
             if (result.success) {
                 this.showSuccess('Login successful! Redirecting...');
-                setTimeout(() => {
-                    window.location.href = 'dashboard.html';
-                }, 1500);
+    
+                };
             } else {
                 this.showError('password', result.error || 'Invalid credentials');
                 submitBtn.innerHTML = originalText;
