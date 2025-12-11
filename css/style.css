@@ -1527,3 +1527,63 @@ p {
         max-width: none;
     }
     }
+/* Notification Styles */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 500;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    animation: slideIn 0.3s ease;
+    max-width: 400px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.notification.success {
+    background: #28a745;
+    border-left: 4px solid #1e7e34;
+}
+
+.notification.error {
+    background: #dc3545;
+    border-left: 4px solid #c82333;
+}
+
+.notification.info {
+    background: #17a2b8;
+    border-left: 4px solid #138496;
+}
+
+.notification.warning {
+    background: #ffc107;
+    color: #212529;
+    border-left: 4px solid #e0a800;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    }
