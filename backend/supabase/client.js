@@ -30,7 +30,7 @@ export const supabasePublic = createClient(
 export const testConnection = async () => {
   try {
     const { data, error } = await supabase
-      .from('profiles')
+      .from('user_profiles')
       .select('count')
       .limit(1);
     
