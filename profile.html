@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | Quotely-hardy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-quote-left"></i>
+                <h1>Quotely-hardy</h1>
+            </div>
+            <div class="nav-menu">
+                <a href="dashboard.html" class="nav-link">
+                    <i class="fas fa-home"></i> Home
+                </a>
+                <a href="proverbs.html" class="nav-link">
+                    <i class="fas fa-globe"></i> Proverbs
+                </a>
+                <a href="quotes.html" class="nav-link">
+                    <i class="fas fa-quote-right"></i> Quotes
+                </a>
+                <a href="about.html" class="nav-link">
+                    <i class="fas fa-info-circle"></i> About
+                </a>
+                <div class="user-menu">
+                    <img src="https://ui-avatars.com/api/?name=User&background=4A90E2&color=fff" 
+                         alt="User" class="user-avatar" id="userAvatar">
+                    <div class="dropdown">
+                        <a href="profile.html" class="active"><i class="fas fa-user"></i> Profile</a>
+                        <a href="favorites.html"><i class="fas fa-heart"></i> Favorites</a>
+                        <a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                    </div>
+                </div>
+            </div>
+            <button class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="profile-header">
+            <div class="profile-avatar-section">
+                <div class="avatar-container">
+                    <img src="https://ui-avatars.com/api/?name=John+Doe&size=150&background=4A90E2&color=fff&bold=true" 
+                         alt="Profile" class="profile-avatar" id="profileAvatar">
+                    <button class="avatar-upload" id="uploadAvatar">
+                        <i class="fas fa-camera"></i>
+                    </button>
+                </div>
+                <div class="profile-info">
+                    <h1 id="profileName">John Doe</h1>
+                    <p class="profile-email" id="profileEmail">john.doe@example.com</p>
+                    <p class="profile-bio" id="profileBio">Quote enthusiast and daily inspiration seeker</p>
+                    <div class="profile-meta">
+                        <span class="member-since">
+                            <i class="fas fa-calendar-alt"></i> Member since March 2023
+                        </span>
+                        <span class="user-level">
+                            <i class="fas fa-star"></i> Pro Member
+                        </span>
+                    </div>
+                </div>
+                <button class="btn btn-primary" id="editProfileBtn">
+                    <i class="fas fa-edit"></i> Edit Profile
+                </button>
+            </div>
+        </div>
+
+        <div class="profile-stats-section">
+            <div class="section-header">
+                <h2><i class="fas fa-chart-line"></i> Your Statistics</h2>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Favorites</h3>
+                    <p class="stat-number" id="favoritesStat">0</p>
+                    <p class="stat-change">Loading...</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-thumbs-up"></i>
+                    <h3>Likes Given</h3>
+                    <p class="stat-number" id="likesStat">0</p>
+                    <p class="stat-change">Loading...</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-share"></i>
+                    <h3>Shares</h3>
+                    <p class="stat-number" id="sharesStat">0</p>
+                    <p class="stat-change">Loading...</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-fire"></i>
+                    <h3>Streak</h3>
+                    <p class="stat-number" id="streakStat">0 days</p>
+                    <p class="stat-change">Loading...</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-pen"></i>
+                    <h3>Quotes Submitted</h3>
+                    <p class="stat-number" id="submittedStat">0</p>
+                    <p class="stat-change">Loading...</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-eye"></i>
+                    <h3>Total Views</h3>
+                    <p class="stat-number" id="viewsStat">0</p>
+                    <p class="stat-change">Loading...</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile-tabs">
+            <div class="tab-buttons">
+                <button class="tab-btn active" data-tab="activity">
+                    <i class="fas fa-history"></i> Recent Activity
+                </button>
+                <button class="tab-btn" data-tab="favorites">
+                    <i class="fas fa-heart"></i> Favorite Quotes
+                </button>
+                <button class="tab-btn" data-tab="submissions">
+                    <i class="fas fa-paper-plane"></i> My Submissions
+                </button>
+                <button class="tab-btn" data-tab="settings">
+                    <i class="fas fa-cog"></i> Account Settings
+                </button>
+            </div>
+
+            <div class="tab-content active" id="activityTab">
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-heart text-red"></i>
+                        </div>
+                        <div class="activity-details">
+                            <p>You favorited <strong>"The only way to do great work is to love what you do."</strong></p>
+                            <p class="activity-time">2 hours ago</p>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-share text-blue"></i>
+                        </div>
+                        <div class="activity-details">
+                            <p>You shared a quote on Twitter</p>
+                            <p class="activity-time">Yesterday, 3:45 PM</p>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-thumbs-up text-green"></i>
+                        </div>
+                        <div class="activity-details">
+                            <p>You liked <strong>"Life is what happens to you while you're busy making other plans."</strong></p>
+                            <p class="activity-time">2 days ago</p>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-pen text-purple"></i>
+                        </div>
+                        <div class="activity-details">
+                            <p>You submitted a new quote for review</p>
+                            <p class="activity-time">3 days ago</p>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-user-plus text-orange"></i>
+                        </div>
+                        <div class="activity-details">
+                            <p>You followed <strong>@quote_master</strong></p>
+                            <p class="activity-time">1 week ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="favoritesTab">
+                <div class="favorites-grid" id="profileFavoritesGrid">
+                    <!-- Favorite quotes will be loaded here -->
+                    <div class="loading-spinner">
+                        <div class="spinner"></div>
+                        <p>Loading your favorite quotes...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="submissionsTab">
+                <div class="submissions-list" id="profileSubmissions">
+                    <!-- User's submitted quotes will be loaded here -->
+                    <div class="empty-state">
+                        <i class="fas fa-paper-plane"></i>
+                        <h3>No submissions yet</h3>
+                        <p>Submit your first quote and share wisdom with the community!</p>
+                        <a href="quotes.html#submitQuoteForm" class="btn btn-primary">
+                            <i class="fas fa-plus"></i> Submit a Quote
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="settingsTab">
+                <form id="profileSettingsForm" class="settings-form">
+                    <div class="settings-section">
+                        <h3><i class="fas fa-user"></i> Personal Information</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="settingsName">Full Name</label>
+                                <input type="text" id="settingsName" name="name" value="John Doe">
+                            </div>
+                            <div class="form-group">
+                                <label for="settingsUsername">Username</label>
+                                <input type="text" id="settingsUsername" name="username" value="johndoe">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="settingsBio">Bio</label>
+                            <textarea id="settingsBio" name="bio" rows="3">Quote enthusiast and daily inspiration seeker</textarea>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="settingsWebsite">Website</label>
+                                <input type="url" id="settingsWebsite" name="website" placeholder="https://example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="settingsLocation">Location</label>
+                                <input type="text" id="settingsLocation" name="location" placeholder="City, Country">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="settings-section">
+                        <h3><i class="fas fa-bell"></i> Notification Preferences</h3>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="emailNotifications" checked>
+                                <span>Email notifications</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="dailyQuoteEmail" checked>
+                                <span>Daily quote email</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="newFollowerNotifications">
+                                <span>New follower alerts</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="quoteLikesNotifications" checked>
+                                <span>Quote likes notifications</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="settings-section">
+                        <h3><i class="fas fa-lock"></i> Security</h3>
+                        <div class="form-group">
+                            <label for="currentPassword">Current Password</label>
+                            <input type="password" id="currentPassword" name="currentPassword">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="newPassword">New Password</label>
+                                <input type="password" id="newPassword" name="newPassword">
+                            </div>
+                            <div class="form-group">
+                                <label for="confirmNewPassword">Confirm New Password</label>
+                                <input type="password" id="confirmNewPassword" name="confirmNewPassword">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="settings-section">
+                        <h3><i class="fas fa-palette"></i> Display Preferences</h3>
+                        <div class="form-group">
+                            <label for="themeSelect">Theme</label>
+                            <select id="themeSelect" name="theme">
+                                <option value="light">Light</option>
+                                <option value="dark">Dark</option>
+                                <option value="auto">Auto (System)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="quoteDensity">Quote Display Density</label>
+                            <select id="quoteDensity" name="quoteDensity">
+                                <option value="compact">Compact</option>
+                                <option value="comfortable" selected>Comfortable</option>
+                                <option value="spacious">Spacious</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-save"></i> Save Changes
+                        </button>
+                        <button type="button" class="btn btn-secondary" id="discardChanges">
+                            <i class="fas fa-times"></i> Discard
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="achievements-section">
+            <div class="section-header">
+                <h2><i class="fas fa-trophy"></i> Achievements</h2>
+            </div>
+            <div class="achievements-grid">
+                <div class="achievement-card earned">
+                    <div class="achievement-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>First Favorite</h3>
+                    <p>Favorite your first quote</p>
+                    <span class="achievement-date">Earned Mar 15, 2023</span>
+                </div>
+                <div class="achievement-card earned">
+                    <div class="achievement-icon">
+                        <i class="fas fa-share"></i>
+                    </div>
+                    <h3>Social Sharer</h3>
+                    <p>Share 10 quotes</p>
+                    <span class="achievement-date">Earned Apr 2, 2023</span>
+                </div>
+                <div class="achievement-card earned">
+                    <div class="achievement-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3>7-Day Streak</h3>
+                    <p>Visit for 7 consecutive days</p>
+                    <span class="achievement-date">Earned May 10, 2023</span>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Quote Collector</h3>
+                    <p>Favorite 50 quotes</p>
+                    <span class="achievement-progress">42/50</span>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Community Leader</h3>
+                    <p>Get 10 followers</p>
+                    <span class="achievement-progress">7/10</span>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-pen-fancy"></i>
+                    </div>
+                    <h3>Quote Author</h3>
+                    <p>Submit 5 quotes</p>
+                    <span class="achievement-progress">2/5</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Quotely-hardy</h4>
+                <p>Inspire, Motivate, and Reflect with Quotely</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="dashboard.html">Home</a>
+                <a href="proverbs.html">Proverbs</a>
+                <a href="quotes.html">Quotes</a>
+                <a href="about.html">About Us</a>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Quotely-hardy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Edit Profile Modal -->
+    <div class="modal" id="editProfileModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2><i class="fas fa-edit"></i> Edit Profile</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <form id="editProfileForm" class="modal-form">
+                <div class="form-group">
+                    <label for="editName">Full Name</label>
+                    <input type="text" id="editName" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="editBio">Bio</label>
+                    <textarea id="editBio" name="bio" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="editAvatar">Profile Picture URL</label>
+                    <input type="url" id="editAvatar" name="avatar" placeholder="https://example.com/image.jpg">
+                  </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                    <button type="button" class="btn btn-secondary modal-close">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- REMOVED: Direct Supabase client -->
+    <!-- <script src="js/supabase-client.js"></script> -->
+    
+    <!-- KEPT: API Client for backend communication -->
+    <script src="js/api-client.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+  </html>
+         
