@@ -15,8 +15,8 @@ const limiter = rateLimit({
 
 // CORS configuration - allow your GitHub Pages domain
 const allowedOrigins = [
-  'https://YOUR_USERNAME.github.io',
-  'https://YOUR_USERNAME.github.io/quotely-hardy',
+  'https://kakooza-cyber.github.io',
+  'https://kakooza-cyber.github.io/quotely-hardy',
   'http://localhost:3000',
   'http://127.0.0.1:3000'
 ];
