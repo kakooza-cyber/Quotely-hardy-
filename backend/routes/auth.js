@@ -85,7 +85,7 @@ router.post('/register', async (req, res) => {
 
     // Check if user already exists
     const { data: existingUser } = await supabase
-      .from('users')
+      .from('user_profiles')
       .select('id')
       .eq('email', email)
       .single();
@@ -114,7 +114,7 @@ router.post('/register', async (req, res) => {
     };
 
     const { data: user, error } = await supabase
-      .from('users')
+      .from('user_profiles')
       .insert([userData])
       .select()
       .single();
